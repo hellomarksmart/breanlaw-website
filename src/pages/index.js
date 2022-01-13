@@ -30,7 +30,6 @@ import React, { useState } from 'react';
   ```
 */
 
-
 export default function Example() {
   const [success, setSuccess] = useState(false);
 
@@ -229,7 +228,7 @@ export default function Example() {
                           name="first-name"
                           id="first-name"
                           autoComplete="given-name"
-                          className="py-3 px-4 block w-full shadow-sm text-warm-gray-900 border-2 focus:ring-teal-500 focus:border-teal-500 border-warm-gray-300 rounded-md"
+                          className="py-3 px-4 block w-full shadow-sm text-warm-gray-900 font-sans border-2 focus:ring-teal-500 focus:border-teal-500 border-warm-gray-300 rounded-md"
                         />
                       </div>
                     </div>
@@ -243,7 +242,7 @@ export default function Example() {
                           name="last-name"
                           id="last-name"
                           autoComplete="family-name"
-                          className="py-3 px-4 block w-full shadow-sm text-warm-gray-900 border-2 focus:ring-teal-500 focus:border-teal-500 border-warm-gray-300 rounded-md"
+                          className="py-3 px-4 block w-full shadow-sm text-warm-gray-900 font-sans border-2 focus:ring-teal-500 focus:border-teal-500 border-warm-gray-300 rounded-md"
                         />
                       </div>
                     </div>
@@ -257,7 +256,7 @@ export default function Example() {
                           name="email"
                           type="email"
                           autoComplete="email"
-                          className="py-3 px-4 block w-full shadow-sm text-warm-gray-900 border-2 focus:ring-teal-500 focus:border-teal-500 border-warm-gray-300 rounded-md"
+                          className="py-3 px-4 block w-full shadow-sm text-warm-gray-900 font-sans border-2 focus:ring-teal-500 focus:border-teal-500 border-warm-gray-300 rounded-md"
                         />
                       </div>
                     </div>
@@ -276,7 +275,7 @@ export default function Example() {
                           name="phone"
                           id="phone"
                           autoComplete="tel"
-                          className="py-3 px-4 block w-full shadow-sm text-warm-gray-900 border-2 focus:ring-teal-500 focus:border-teal-500 border-warm-gray-300 rounded-md"
+                          className="py-3 px-4 block w-full shadow-sm text-warm-gray-900 font-sans border-2 focus:ring-teal-500 focus:border-teal-500 border-warm-gray-300 rounded-md"
                           aria-describedby="phone-optional"
                         />
                       </div>
@@ -290,7 +289,7 @@ export default function Example() {
                           type="text"
                           name="subject"
                           id="subject"
-                          className="py-3 px-4 block w-full shadow-sm text-warm-gray-900 border-2 focus:ring-teal-500 focus:border-teal-500 border-warm-gray-300 rounded-md"
+                          className="py-3 px-4 block w-full shadow-sm text-warm-gray-900 font-sans border-2 focus:ring-teal-500 focus:border-teal-500 border-warm-gray-300 rounded-md"
                         />
                       </div>
                     </div>
@@ -308,7 +307,7 @@ export default function Example() {
                           id="message"
                           name="message"
                           rows={4}
-                          className="py-3 px-4 block w-full shadow text-warm-gray-900 border-2 focus:ring-teal-500 focus:border-teal-500 border border-warm-gray-300 rounded-md"
+                          className="py-3 px-4 block w-full shadow text-warm-gray-900 font-sans border-2 focus:ring-teal-500 focus:border-teal-500 border border-warm-gray-300 rounded-md"
                           aria-describedby="message-max"
                           defaultValue={''}
                         />
@@ -316,7 +315,6 @@ export default function Example() {
                     </div>
                     <div className="sm:col-span-2 sm:flex sm:justify-end">
                       <button
-
                         onClick={success_message}
                         className="mt-2 w-full inline-flex items-center justify-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium font-sans text-white bg-teal-500 hover:bg-teal-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-500 sm:w-auto"
                       >
