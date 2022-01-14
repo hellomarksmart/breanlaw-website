@@ -33,12 +33,10 @@ const Homepage = () => {
               {headings.map(item => (
                 <>
                   <h1 className="text-4xl font-bold tracking-tight text-zinc-900 font-sans sm:text-5xl lg:text-6xl">
-                    {" "}
-                    {item.h1_heading}{" "}
+                    {item.h1_heading}
                   </h1>
                   <p className="mt-6 text-lg text-zinc-400 font-sans max-w-3xl">
-                    {" "}
-                    {item.h1_desc}{" "}
+                    {item.h1_desc}
                   </p>
                 </>
               ))}
@@ -129,12 +127,10 @@ const Homepage = () => {
                   {headings.map(item => (
                     <>
                       <h3 className="text-lg font-normal text-stone-100">
-                        {" "}
-                        {item.h3_heading}{" "}
+                        {item.h3_heading}
                       </h3>
                       <p className="text-base text-stone-100 font-sans max-w-3xl">
-                        {" "}
-                        {item.h3_desc}{" "}
+                        {item.h3_desc}
                       </p>
                     </>
                   ))}
@@ -146,6 +142,7 @@ const Homepage = () => {
                   </h3>
                   <form
                     action="#"
+                    onSubmit={success_message}
                     method="POST"
                     className="mt-6 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8"
                   >
@@ -163,6 +160,7 @@ const Homepage = () => {
                           id="first-name"
                           autoComplete="given-name"
                           className="py-3 px-4 block w-full shadow-sm text-warm-gray-900 font-sans border-2 focus:ring-teal-500 focus:border-teal-500 border-warm-gray-300 rounded-md"
+                          required
                         />
                       </div>
                     </div>
@@ -180,6 +178,7 @@ const Homepage = () => {
                           id="last-name"
                           autoComplete="family-name"
                           className="py-3 px-4 block w-full shadow-sm text-warm-gray-900 font-sans border-2 focus:ring-teal-500 focus:border-teal-500 border-warm-gray-300 rounded-md"
+                          required
                         />
                       </div>
                     </div>
@@ -197,6 +196,7 @@ const Homepage = () => {
                           type="email"
                           autoComplete="email"
                           className="py-3 px-4 block w-full shadow-sm text-warm-gray-900 font-sans border-2 focus:ring-teal-500 focus:border-teal-500 border-warm-gray-300 rounded-md"
+                          required
                         />
                       </div>
                     </div>
@@ -239,6 +239,7 @@ const Homepage = () => {
                           name="subject"
                           id="subject"
                           className="py-3 px-4 block w-full shadow-sm text-warm-gray-900 font-sans border-2 focus:ring-teal-500 focus:border-teal-500 border-warm-gray-300 rounded-md"
+                          required
                         />
                       </div>
                     </div>
@@ -265,12 +266,13 @@ const Homepage = () => {
                           className="py-3 px-4 block w-full shadow text-warm-gray-900 font-sans border-2 focus:ring-teal-500 focus:border-teal-500 border border-warm-gray-300 rounded-md"
                           aria-describedby="message-max"
                           defaultValue={""}
+                          required
                         />
                       </div>
                     </div>
                     <div className="sm:col-span-2 sm:flex sm:justify-end">
                       <button
-                        onClick={success_message}
+                        type="submit"
                         className="mt-2 w-full inline-flex items-center justify-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium font-sans text-white bg-teal-500 hover:bg-teal-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-500 sm:w-auto"
                       >
                         Submit
@@ -279,8 +281,7 @@ const Homepage = () => {
                     {success
                       ? headings.map(item => (
                           <p className="text-sm w-full font-bold tracking-tight text-zinc-400 font-sans sm:text-sm">
-                            {" "}
-                            {item.success_message}{" "}
+                            {item.success_message}
                           </p>
                         ))
                       : ""}
