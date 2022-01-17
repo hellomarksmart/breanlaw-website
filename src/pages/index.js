@@ -1,7 +1,7 @@
 import { StaticImage } from "gatsby-plugin-image"
 import React, { useState } from "react"
 
-export default function Example() {
+const Homepage = () => {
   const [success, setSuccess] = useState(false)
 
   const success_message = event => {
@@ -300,10 +300,10 @@ export default function Example() {
                     </div>
                     {success
                       ? headings.map(item => (
-                          <p className="text-sm w-full font-bold tracking-tight text-zinc-400 font-sans sm:text-sm">
-                            {item.success_message}
-                          </p>
-                        ))
+                        <p className="text-sm w-full font-bold tracking-tight text-zinc-400 font-sans sm:text-sm">
+                          {item.success_message}
+                        </p>
+                      ))
                       : ""}
                   </form>
                 </div>
@@ -315,3 +315,5 @@ export default function Example() {
     </div>
   )
 }
+
+export default Homepage
