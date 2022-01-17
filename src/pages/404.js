@@ -1,4 +1,7 @@
 import * as React from "react"
+
+import { Link } from "gatsby"
+
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 
@@ -8,7 +11,7 @@ const NotFoundPage = () => {
       text_404: "404",
       heading: "Page not found",
       subheading: "Please check the URL in the address bar and try again.",
-      button_text: "Go back home"
+      button_text: "Go back home",
     },
   ]
 
@@ -21,19 +24,25 @@ const NotFoundPage = () => {
             <main className="sm:flex">
               {headings.map(item => (
                 <>
-                  <p className="text-4xl font-extrabold text-teal-500 sm:text-5xl">{item.text_404}</p>
+                  <p className="text-4xl font-extrabold text-lime-600 sm:text-5xl">
+                    {item.text_404}
+                  </p>
                   <div className="sm:ml-6">
                     <div className="sm:border-l sm:border-gray-200 sm:pl-6">
-                      <h1 className="text-4xl font-extrabold text-gray-900 tracking-tight sm:text-5xl">{item.heading}</h1>
-                      <p className="mt-1 text-base text-teal-500">{item.subheading}</p>
+                      <h1 className="text-4xl font-extrabold text-gray-900 tracking-tight sm:text-5xl">
+                        {item.heading}
+                      </h1>
+                      <p className="mt-1 text-base text-lime-600">
+                        {item.subheading}
+                      </p>
                     </div>
                     <div className="mt-10 flex space-x-3 sm:border-l sm:border-transparent sm:pl-6">
-                      <a
-                        href="https://breanlawwebsite.gatsbyjs.io/"
-                        className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-teal-500 hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-600"
+                      <Link
+                        to="/"
+                        className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-lime-600 hover:bg-lime-700 focus:outline-none"
                       >
                         {item.button_text}
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 </>
