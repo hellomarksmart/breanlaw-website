@@ -1,4 +1,8 @@
 import * as React from "react"
+<<<<<<< HEAD
+=======
+
+>>>>>>> 84849a7 (customized 404 page (#5))
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 
@@ -16,7 +20,11 @@ const Header = () => (
               width={180}
               quality={95}
               formats={["auto", "webp", "avif"]}
+<<<<<<< HEAD
               alt="Breanlaw Trademark Law Firm logo"
+=======
+              alt="Remarkable logo"
+>>>>>>> 84849a7 (customized 404 page (#5))
               style={{ marginBottom: `1.45rem` }}
             />
           </Link>
