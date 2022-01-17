@@ -1,7 +1,8 @@
-import { StaticImage } from "gatsby-plugin-image"
 import React, { useState } from "react"
+import Layout from "../components/layout"
+import Seo from "../components/seo"
 
-export default function Example() {
+const Homepage = () => {
   const [success, setSuccess] = useState(false)
 
   const success_message = event => {
@@ -23,32 +24,11 @@ export default function Example() {
   ]
 
   return (
-    <div className="bg-white">
-      <div className="bg-stone-50">
-        <nav
-          className="relative max-w-7xl mx-auto flex items-center justify-between pt-6 px-6 xl:px-8"
-          aria-label="Global"
-        >
-          <div className="flex items-center flex-1">
-            <div className="flex items-center justify-between w-full lg:w-auto">
-              <a href="#">
-                <StaticImage
-                  src="../images/Breanlawlogo.png"
-                  width={180}
-                  quality={95}
-                  formats={["auto", "webp", "avif"]}
-                  alt="Remarkable logo"
-                  style={{ marginBottom: `1.45rem` }}
-                />
-              </a>
-            </div>
-          </div>
-        </nav>
-      </div>
-
-      <main className="overflow-hidden">
+    <Layout>
+      <Seo title="Home" />
+      <div className="bg-white overflow-hidden">
         <div className="bg-stone-50">
-          <div className="py-24 lg:py-30">
+          <div className="pt-5 lg:pt-11">
             <div className="relative z-10 max-w-7xl mx-auto pl-4 pr-8 sm:px-6 lg:px-8">
               {headings.map(item => (
                 <>
@@ -110,7 +90,7 @@ export default function Example() {
           <div className="max-w-7xl pb-3 mx-auto px-4 sm:px-6 lg:px-8">
             <div className="relative bg-white shadow-xl">
               <div className="grid grid-cols-1 lg:grid-cols-3">
-                <div className="relative overflow-hidden py-10 px-6 bg-gradient-to-b from-teal-500 to-teal-600 sm:px-10 xl:px-12 xl:py-6">
+                <div className="relative overflow-hidden py-10 px-6 bg-gradient-to-b from-lime-600 to-lime-700 sm:px-10 xl:px-12 xl:py-6">
                   <div
                     className="hidden absolute top-0 right-0 bottom-0 w-1/2 pointer-events-none lg:block"
                     aria-hidden="true"
@@ -293,7 +273,7 @@ export default function Example() {
                     <div className="sm:col-span-2 sm:flex sm:justify-end">
                       <button
                         type="submit"
-                        className="mt-2 w-full inline-flex items-center justify-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium font-sans text-white bg-teal-500 hover:bg-teal-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-500 sm:w-auto"
+                        className="mt-2 w-full inline-flex items-center justify-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium font-sans text-white bg-lime-600 hover:bg-lime-700 focus:outline-none sm:w-auto"
                       >
                         Submit
                       </button>
@@ -311,7 +291,8 @@ export default function Example() {
             </div>
           </div>
         </section>
-      </main>
-    </div>
+      </div>
+    </Layout>
   )
 }
+export default Homepage
