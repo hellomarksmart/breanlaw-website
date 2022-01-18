@@ -1,7 +1,8 @@
-import { StaticImage } from "gatsby-plugin-image"
 import React, { useState } from "react"
+import Layout from "../components/layout"
+import Seo from "../components/seo"
 
-export default function Example() {
+const Homepage = () => {
   const [success, setSuccess] = useState(false)
 
   const success_message = event => {
@@ -23,30 +24,9 @@ export default function Example() {
   ]
 
   return (
-    <div className="bg-white">
-      <div className="bg-stone-50">
-        <nav
-          className="relative max-w-7xl mx-auto flex items-center justify-between pt-6 px-6 xl:px-8"
-          aria-label="Global"
-        >
-          <div className="flex items-center flex-1">
-            <div className="flex items-center justify-between w-full lg:w-auto">
-              <a href="#">
-                <StaticImage
-                  src="../images/Breanlawlogo.png"
-                  width={180}
-                  quality={95}
-                  formats={["auto", "webp", "avif"]}
-                  alt="Remarkable logo"
-                  style={{ marginBottom: `1.45rem` }}
-                />
-              </a>
-            </div>
-          </div>
-        </nav>
-      </div>
-
-      <main className="overflow-hidden">
+    <Layout>
+      <Seo title="Home" />
+      <div className="bg-stone-50 overflow-hidden">
         <div className="bg-stone-50">
           <div className="py-4 lg:py-11">
             <div className="relative z-10 max-w-7xl mx-auto pl-4 pr-8 sm:px-6 lg:px-8">
@@ -312,7 +292,8 @@ export default function Example() {
             </div>
           </div>
         </section>
-      </main>
-    </div>
+      </div>
+    </Layout>
   )
 }
+export default Homepage
