@@ -281,10 +281,10 @@ const Homepage = () => {
                     </div>
                     {success
                       ? headings.map(item => (
-                        <p className="text-sm w-[26rem] font-bold tracking-tight text-zinc-400 font-sans sm:text-sm">
-                          {item.success_message}
-                        </p>
-                      ))
+                          <p className="md:w-[30rem] sm:w-[25rem] w-[70vw] m-auto bg-lime-500 text-center sm:text-left  p-3 rounded-md text-sm font-bold tracking-tight text-white font-sans sm:text-base">
+                            {item.success_message}
+                          </p>
+                        ))
                       : ""}
                   </form>
                 </div>
