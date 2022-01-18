@@ -24,7 +24,7 @@ const NotFoundPage = () => {
             <div className="sm:flex">
               {headings.map(item => (
                 <>
-                  <p className="text-4xl font-extrabold text-lime-600 sm:text-5xl">
+                  <p className="text-4xl font-extrabold text-lime-500 sm:text-5xl">
                     {item.text_404}
                   </p>
                   <div className="sm:ml-6">
@@ -32,7 +32,7 @@ const NotFoundPage = () => {
                       <h1 className="text-4xl font-extrabold text-gray-900 tracking-tight sm:text-5xl">
                         {item.heading}
                       </h1>
-                      <p className="mt-1 text-base text-lime-600">
+                      <p className="mt-1 text-base text-lime-500">
                         {item.subheading}
                       </p>
                     </div>
