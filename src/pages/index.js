@@ -90,7 +90,7 @@ const Homepage = () => {
           <div className="max-w-7xl pb-3 mx-auto px-4 sm:px-6 lg:px-8">
             <div className="relative bg-white shadow-xl">
               <div className="grid grid-cols-1 lg:grid-cols-3">
-                <div className="relative overflow-hidden py-10 px-6 bg-gradient-to-b from-lime-500 to-lime-600 sm:px-10 xl:px-12 xl:py-6">
+                <div className="relative overflow-hidden py-10 px-6 bg-gradient-to-b from-lime-600 to-lime-700 sm:px-10 xl:px-12 xl:py-6">
                   <div
                     className="hidden absolute top-0 right-0 bottom-0 w-1/2 pointer-events-none lg:block"
                     aria-hidden="true"
@@ -274,14 +274,14 @@ const Homepage = () => {
                     <div className="sm:col-span-2 sm:flex sm:justify-end">
                       <button
                         type="submit"
-                        className="mt-2 w-full inline-flex items-center justify-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium font-sans text-white bg-lime-500 hover:bg-lime-600 focus:outline-none sm:w-auto"
+                        className="mt-2 w-full inline-flex items-center justify-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium font-sans text-white bg-lime-600 hover:bg-lime-700 focus:outline-none sm:w-auto"
                       >
                         Submit
                       </button>
                     </div>
                     {success
                       ? headings.map(item => (
-                          <p className="md:w-[30rem] sm:w-[25rem] w-[70vw] m-auto bg-lime-500 text-center sm:text-left  p-3 rounded-md text-sm font-bold tracking-tight text-white font-sans sm:text-base">
+                          <p className="text-sm w-[26rem] font-bold tracking-tight text-zinc-400 font-sans sm:text-sm">
                             {item.success_message}
                           </p>
                         ))
