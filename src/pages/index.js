@@ -28,7 +28,7 @@ const Homepage = () => {
       <Seo title="Home" />
       <div className="bg-stone-50 overflow-hidden">
         <div className="bg-stone-50">
-          <div className="pt-5 lg:pt-11">
+          <div className="py-4 lg:py-11">
             <div className="relative z-10 max-w-7xl mx-auto pl-4 pr-8 sm:px-6 lg:px-8">
               {headings.map(item => (
                 <>
@@ -126,7 +126,7 @@ const Homepage = () => {
                   </div>
                   {headings.map(item => (
                     <>
-                      <h3 className="text-lg font-normal text-stone-100">
+                      <h3 className="text-lg font-semibold text-stone-100 pt-6">
                         {item.h3_heading}
                       </h3>
                       <p className="text-base text-stone-100 font-sans max-w-3xl">
@@ -266,6 +266,7 @@ const Homepage = () => {
                           className="py-3 px-4 block w-full shadow text-warm-gray-900 font-sans border-2 focus:ring-teal-500 focus:border-teal-500 border border-warm-gray-300 rounded-md"
                           aria-describedby="message-max"
                           defaultValue={""}
+                          maxlength="500"
                           required
                         />
                       </div>
@@ -280,10 +281,10 @@ const Homepage = () => {
                     </div>
                     {success
                       ? headings.map(item => (
-                          <p className="text-sm w-full font-bold tracking-tight text-zinc-400 font-sans sm:text-sm">
-                            {item.success_message}
-                          </p>
-                        ))
+                        <p className="text-sm w-[26rem] font-bold tracking-tight text-zinc-400 font-sans sm:text-sm">
+                          {item.success_message}
+                        </p>
+                      ))
                       : ""}
                   </form>
                 </div>
