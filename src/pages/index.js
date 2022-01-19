@@ -149,9 +149,10 @@ const Homepage = () => {
                     Send us a message
                   </h3>
                   <form
-                    action="#"
+                    action="mailto:adi@fullstack.ph"
                     onSubmit={success_message}
-                    method="POST"
+                    method="get"
+                    enctype="text/plain"
                     className="mt-6 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8"
                   >
                     <div>
@@ -294,6 +295,7 @@ const Homepage = () => {
                     <div className="sm:col-span-2 sm:flex sm:justify-end">
                       <button
                         type="submit"
+                        value="Send"
                         className="mt-2 w-full inline-flex items-center justify-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium font-sans text-white bg-lime-500 hover:bg-lime-600 focus:outline-none sm:w-auto"
                       >
                         Submit
