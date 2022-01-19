@@ -10,6 +10,14 @@ const Homepage = () => {
     setSuccess(true)
   }
 
+  const [FName, setFName] = useState('')
+  const [LName, setLName] = useState('')
+  const [Email, setEmail] = useState('')
+  const [Phone, setPhone] = useState('')
+  const [Subject, setSubject] = useState('')
+  const [Message, setMessage] = useState('')
+
+
   const headings = [
     {
       h1_heading: "Get in touch",
@@ -161,6 +169,8 @@ const Homepage = () => {
                           autoComplete="given-name"
                           className="py-3 px-4 block w-full shadow-sm text-warm-gray-900 font-sans border-2 focus:ring-teal-500 focus:border-teal-500 border-warm-gray-300 rounded-md"
                           required
+                          value={FName}
+                          onChange={(e) => setFName(e.target.value)}
                         />
                       </div>
                     </div>
@@ -179,6 +189,8 @@ const Homepage = () => {
                           autoComplete="family-name"
                           className="py-3 px-4 block w-full shadow-sm text-warm-gray-900 font-sans border-2 focus:ring-teal-500 focus:border-teal-500 border-warm-gray-300 rounded-md"
                           required
+                          value={LName}
+                          onChange={(e) => setLName(e.target.value)}
                         />
                       </div>
                     </div>
@@ -197,6 +209,8 @@ const Homepage = () => {
                           autoComplete="email"
                           className="py-3 px-4 block w-full shadow-sm text-warm-gray-900 font-sans border-2 focus:ring-teal-500 focus:border-teal-500 border-warm-gray-300 rounded-md"
                           required
+                          value={Email}
+                          onChange={(e) => setEmail(e.target.value)}
                         />
                       </div>
                     </div>
@@ -223,6 +237,8 @@ const Homepage = () => {
                           autoComplete="tel"
                           className="py-3 px-4 block w-full shadow-sm text-warm-gray-900 font-sans border-2 focus:ring-teal-500 focus:border-teal-500 border-warm-gray-300 rounded-md"
                           aria-describedby="phone-optional"
+                          value={Phone}
+                          onChange={(e) => setPhone(e.target.value)}
                         />
                       </div>
                     </div>
@@ -240,6 +256,8 @@ const Homepage = () => {
                           id="subject"
                           className="py-3 px-4 block w-full shadow-sm text-warm-gray-900 font-sans border-2 focus:ring-teal-500 focus:border-teal-500 border-warm-gray-300 rounded-md"
                           required
+                          value={Subject}
+                          onChange={(e) => setSubject(e.target.value)}
                         />
                       </div>
                     </div>
@@ -268,6 +286,8 @@ const Homepage = () => {
                           defaultValue={""}
                           maxlength="500"
                           required
+                          value={Message}
+                          onChange={(e) => setMessage(e.target.value)}
                         />
                       </div>
                     </div>
