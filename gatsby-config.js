@@ -3,9 +3,19 @@ module.exports = {
     title: `Gatsby Default Starter`,
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
     author: `@gatsbyjs`,
-    siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
+    // siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
+    siteUrl: `https://breanlawwebsitestaging09320.gatsbyjs.io/`,
   },
   plugins: [
+    `gatsby-plugin-sitemap`,
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: 'https://breanlawwebsitestaging09320.gatsbyjs.io/',
+        sitemap: 'https://breanlawwebsitestaging09320.gatsbyjs.io/sitemap-0.xml',
+        policy: [{ userAgent: 'ia_archiver', allow: '/', disallow: '/page-2' }]
+      }
+    },
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
     `gatsby-plugin-postcss`,
