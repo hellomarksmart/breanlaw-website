@@ -149,7 +149,7 @@ const Homepage = () => {
                     Send us a message
                   </h3>
                   <form
-                    action="mailto:adi@fullstack.ph"
+                    action="#"
                     onSubmit={success_message}
                     method="get"
                     enctype="text/plain"
