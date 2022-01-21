@@ -1,5 +1,4 @@
 import * as React from "react"
-
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 
@@ -17,6 +16,7 @@ const Header = () => (
               width={180}
               quality={95}
               formats={["auto", "webp", "avif"]}
+              alt="Breanlaw Trademark Law Firm logo"
               style={{ marginBottom: `1.45rem` }}
             />
           </Link>
