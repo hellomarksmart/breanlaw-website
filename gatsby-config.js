@@ -1,9 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
+    title: `Breanlaw Trademark Law Firm`,
+    description: `Breanlaw Trademark Law Firm`,
     author: `@gatsbyjs`,
-    siteUrl: `https://breanlawwebsitestaging09320.gatsbyjs.io/`,
+    siteUrl: `https://breanlawtrademarks.com/`,
   },
   plugins: [
     {
