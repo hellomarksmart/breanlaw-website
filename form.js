@@ -28,7 +28,7 @@ app.post("/send", function (req, res) {
   let mailOptions = {
     from: [contactAddress],
     to: [contactAddress],
-    subject: `Email from Breanlaw.legal: ${req.body.mailerState.subject}`,
+    subject: `Email from Breanlaw: ${req.body.mailerState.subject}`,
     text: `${req.body.mailerState.message}`,
     html: `<p>Name: ${req.body.mailerState.FName} ${req.body.mailerState.LName}</p>
     <p>Email: ${req.body.mailerState.email}</p>
