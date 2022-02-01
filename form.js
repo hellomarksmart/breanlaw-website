@@ -13,8 +13,8 @@ let transporter = nodemailer.createTransport({
   host: 'smtp.migadu.com',
   port: 587,
   auth: {
-    user: 'docket@remarkable.legal',
-    pass: '4h7Q8n--TCgMb'
+    user: process.env.EMAIL,
+    pass: process.env.WORD,
   }
 });
 
