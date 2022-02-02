@@ -265,7 +265,6 @@ const Homepage = () => {
                           name="phone"
                           value={mailerState.phone}
                           type="tel"
-                          pattern="\d*"
                           autoComplete="phone"
                           className="py-3 px-4 block w-full shadow-sm text-warm-gray-900 font-sans border-2 focus:ring-teal-500 focus:border-teal-500 border-warm-gray-300 rounded-md"
                           required
