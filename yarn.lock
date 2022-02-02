@@ -3515,7 +3515,14 @@ cosmiconfig-toml-loader@1.0.0:
   resolved "https://registry.npmjs.org/cosmiconfig-toml-loader/-/cosmiconfig-toml-loader-1.0.0.tgz"
   integrity sha512-H/2gurFWVi7xXvCyvsWRLCMekl4tITJcX0QEsDMpzxtuxDyM59xLatYNg4s/k9AA/HdtCYfj2su8mgA0GSDLDA==
   dependencies:
+<<<<<<< HEAD
     "@iarna/toml" "^2.2.5"
+=======
+    "@babel/runtime" "^7.15.4"
+    common-tags "^1.8.2"
+    minimatch "^3.0.4"
+    sitemap "^7.0.0"
+>>>>>>> 004d8c31a62a39c8d0e1a69f722b543f1201553b
 
 cosmiconfig@7.0.0:
   version "7.0.0"
@@ -9239,11 +9246,15 @@ remark-mdxjs@^2.0.0-next.4:
   resolved "https://registry.npmjs.org/remark-mdxjs/-/remark-mdxjs-2.0.0-next.8.tgz"
   integrity sha512-Z/+0eWc7pBEABwg3a5ptL+vCTWHYMFnYzpLoJxTm2muBSk8XyB/CL+tEJ6SV3Q/fScHX2dtG4JRcGSpbZFLazQ==
   dependencies:
+<<<<<<< HEAD
     "@babel/core" "7.10.5"
     "@babel/helper-plugin-utils" "7.10.4"
     "@babel/plugin-proposal-object-rest-spread" "7.10.4"
     "@babel/plugin-syntax-jsx" "7.10.4"
     "@mdx-js/util" "^2.0.0-next.8"
+=======
+    "querystring" "^0.2.0"
+>>>>>>> 004d8c31a62a39c8d0e1a69f722b543f1201553b
 
 remark-parse@^6.0.3:
   version "6.0.3"
@@ -10720,7 +10731,13 @@ unist-util-stringify-position@^2.0.0, unist-util-stringify-position@^2.0.3:
   resolved "https://registry.npmjs.org/unist-util-stringify-position/-/unist-util-stringify-position-2.0.3.tgz"
   integrity sha512-3faScn5I+hy9VleOq/qNbAd6pAx7iH5jYBMS9I1HgQVijz/4mv5Bvw5iw1sC/90CODiKo81G/ps8AJrISn687g==
   dependencies:
+<<<<<<< HEAD
     "@types/unist" "^2.0.2"
+=======
+    "@types/component-emitter" "^1.2.10"
+    component-emitter "~1.3.0"
+    debug "~4.3.1"
+>>>>>>> 004d8c31a62a39c8d0e1a69f722b543f1201553b
 
 unist-util-visit-parents@^2.0.0:
   version "2.1.2"
