@@ -1,8 +1,8 @@
+require("dotenv").config({ path: (__dirname, '.env') });
 const express = require("express");
 const nodemailer = require("nodemailer");
 const cors = require("cors");
 const app = express();
-require("dotenv").config();
 
 const contactAddress = "docket@remarkable.legal"
 
@@ -14,8 +14,8 @@ let transporter = nodemailer.createTransport({
   host: 'smtp.migadu.com',
   port: 587,
   auth: {
-    user: "docket@remarkable.legal",
-    pass: "4h7Q8n--TCgMb",
+    user: 'docket@remarkable.legal',
+    pass: '4h7Q8n--TCgMb'
   }
 });
 
