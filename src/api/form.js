@@ -1,11 +1,12 @@
 const express = require("express");
 const nodemailer = require("nodemailer");
-const app = express();
 const cors = require("cors");
+const app = express();
 require("dotenv").config();
+
 const contactAddress = "docket@remarkable.legal"
 
-// middleware
+// Middleware
 app.use(express.json());
 app.use(cors());
 
