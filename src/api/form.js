@@ -13,8 +13,8 @@ let transporter = nodemailer.createTransport({
   host: 'smtp.migadu.com',
   port: 587,
   auth: {
-    user: process.env.EMAIL,
-    pass: process.env.WORD,
+    user: "docket@remarkable.legal",
+    pass: "4h7Q8n--TCgMb",
   }
 });
 
@@ -24,34 +24,32 @@ transporter.verify((err, success) => {
     : console.log(`=== Server is ready to take messages: ${success} ===`);
 });
 
-app.post("/send", function (req, res) {
-  let mailOptions = {
-    from: `${req.body.mailerState.email}`,
+export default function formHandler(req, res) {
+  const mailOptions = {
+    from: [contactAddress],
     to: [contactAddress],
-    subject: `Email from Breanlaw.legal: ${req.body.mailerState.subject}`,
-    text: `${req.body.mailerState.message}`,
+    subject: `Email from Breanlaw.legal: ${req.body.mailerState.subject}, ${req.body.mailerState.email}`,
+    text: `${req.body.mailerState.email}`,
     html: `<p>Name: ${req.body.mailerState.FName} ${req.body.mailerState.LName}</p>
-    <p>Email: ${req.body.mailerState.email}</p>
-    <p>Phone Number: ${req.body.mailerState.phone}</p>
-    <p>Message: ${req.body.mailerState.message}</p>
-    `
+      <p>Email: ${req.body.mailerState.email}</p>
+      <p>Phone Number: ${req.body.mailerState.phone}</p>
+      <p>Message: ${req.body.mailerState.message}</p>
+      `
   };
-
-  transporter.sendMail(mailOptions, function (err, data) {
-    if (err) {
-      res.json({
-        status: "fail",
-      });
-    } else {
-      console.log("== Message Sent ==");
-      res.json({
-        status: "success",
-      });
-    }
-  });
-});
-
-// const port = 3001;
-// app.listen(port, () => {
-//   console.log(`Server is running on port: ${port}`);
-// });
+  if (req.method === `POST`) {
+    transporter.sendMail(mailOptions, function (err, data) {
+      if (err) {
+        res.json({
+          status: "fail",
+        });
+      } else {
+        console.log("== Message Sent ==");
+        res.json({
+          status: "success",
+        });
+      }
+    });
+  } else {
+    console.log("else condition")
+  }
+}
