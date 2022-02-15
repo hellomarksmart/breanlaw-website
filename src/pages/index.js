@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import $ from 'jquery';
 
 const Homepage = () => {
   const [success, setSuccess] = useState(false)
@@ -21,9 +22,10 @@ const Homepage = () => {
     }))
   }
 
-  const onSubmit = async (e) => {
-    setSuccess(true)
-  };
+  // const onSubmit = async (e) => {
+  //   setSuccess(true)
+  // };
+
 
   const headings = [
     {
@@ -37,6 +39,19 @@ const Homepage = () => {
         "Your message has been received and we will be in touch shortly.",
     },
   ]
+
+  $("#myForm").submit(function (e) {
+    e.preventDefault();
+    $.ajax({
+      url: "https://hooks.zapier.com/hooks/catch/137948/brrfyst/",
+      type: "post",
+      data: $("#myForm").serialize(),
+      success: function () {
+        window.location = "/";
+        setSuccess(true)
+      }
+    });
+  });
 
   return (
     <Layout>
@@ -156,9 +171,8 @@ const Homepage = () => {
                     Send us a message
                   </h3>
                   <form
-                    onSubmit={onSubmit}
-                    method="POST"
-                    action="https://hooks.zapier.com/hooks/catch/137948/brrfyst/"
+
+                    id="myForm"
                     className="mt-6 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8"
                   >
                     <div>
@@ -241,7 +255,6 @@ const Homepage = () => {
                           type="tel"
                           autoComplete="phone"
                           className="py-3 px-4 block w-full shadow-sm text-warm-gray-900 font-sans border-2 focus:ring-teal-500 focus:border-teal-500 border-warm-gray-300 rounded-md"
-                          required
                         />
                       </div>
                     </div>
