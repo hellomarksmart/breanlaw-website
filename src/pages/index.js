@@ -26,7 +26,6 @@ const Homepage = () => {
   //   setSuccess(true)
   // };
 
-
   const headings = [
     {
       h1_heading: "Get in touch",
@@ -40,14 +39,14 @@ const Homepage = () => {
     },
   ]
 
-  $("#myForm").submit(function (e) {
+  $("#contactForm").submit(function (e) {
     e.preventDefault();
     $.ajax({
       url: "https://hooks.zapier.com/hooks/catch/137948/brrfyst/",
       type: "post",
-      data: $("#myForm").serialize(),
+      data: $("#contactForm").serialize(),
       success: function () {
-        window.location = "/";
+        window.location = window.location.href;
         setSuccess(true)
       }
     });
@@ -171,8 +170,7 @@ const Homepage = () => {
                     Send us a message
                   </h3>
                   <form
-
-                    id="myForm"
+                    id="contactForm"
                     className="mt-6 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8"
                   >
                     <div>
