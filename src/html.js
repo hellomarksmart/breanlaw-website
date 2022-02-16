@@ -12,21 +12,7 @@ export default function HTML(props) {
           content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
         {props.headComponents}
-        <script
-          defer
-          type="text/javascript"
-          dangerouslySetInnerHTML={{
-            __html: `
-              (function(d, script, t) {
-                script = d.createElement('script');
-                script.type = 'text/javascript';
-                script.async = true;
-                script.src = 'https://code.jquery.com/jquery-3.6.0.js';
-                d.getElementsByTagName('head')[0].appendChild(script);
-              }(document));
-        `,
-          }}
-        />
+        <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
       </head>
       <body {...props.bodyAttributes}>
         {props.preBodyComponents}
