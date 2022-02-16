@@ -22,10 +22,6 @@ const Homepage = () => {
     }))
   }
 
-  // 
-  //   setSuccess(true)
-  // };
-
   const headings = [
     {
       h1_heading: "Get in touch",
