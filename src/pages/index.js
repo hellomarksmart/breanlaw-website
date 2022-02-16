@@ -46,7 +46,6 @@ const Homepage = () => {
       type: "post",
       data: $("#contactForm").serialize(),
       success: function () {
-        window.location = window.location.href;
         setSuccess(true)
       }
     });
