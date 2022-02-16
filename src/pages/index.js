@@ -22,7 +22,7 @@ const Homepage = () => {
     }))
   }
 
-  // const onSubmit = async (e) => {
+  // 
   //   setSuccess(true)
   // };
 
@@ -39,7 +39,7 @@ const Homepage = () => {
     },
   ]
 
-  $("#contactForm").submit(function (e) {
+  const submitHandler = async (e) => {
     e.preventDefault();
     $.ajax({
       url: "https://hooks.zapier.com/hooks/catch/137948/brrfyst/",
@@ -49,7 +49,7 @@ const Homepage = () => {
         setSuccess(true)
       }
     });
-  });
+  };
 
   return (
     <Layout>
@@ -170,6 +170,7 @@ const Homepage = () => {
                   </h3>
                   <form
                     id="contactForm"
+                    onSubmit={submitHandler}
                     className="mt-6 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8"
                   >
                     <div>
